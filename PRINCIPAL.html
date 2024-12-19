@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructura de Datos</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+} 
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    background: linear-gradient(
+        rgba(5, 3, 15, 0.7),
+        rgba(5, 3, 15, 0.7)),
+        url(img/22.PNG) center bottom no-repeat;
+    background-size: cover;
+    min-height: 70vh;
+    display: flex;
+    align-items: center; 
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #FFFDFC;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #FFFDFC;
+    display: block;
+    font-weight: 600;
+}
+
+.menu.navbar ul li a:hover {
+    color: #301b6e;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+} 
+
+.menu label{
+    cursor: pointer;
+    display: none;
+
+}
+
+.header-content{
+    text-align: center;
+}
+
+.header-content h1{
+    font-size: 75px;
+    line-height: 80px;
+    color: #F9FAFC;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+}
+
+.header-content p {
+    font-size: 16px;
+    color: #C5C5C5;
+    padding: 0 250px;
+    margin-bottom: 25px;
+}
+
+.btn-1 {
+    display: inline-block;
+    padding: 11px 35px;
+    background-color: #301b6e;
+    color: #F9FAFC;
+    text-transform: uppercase;
+}
+
+.btn-1:hover {
+    background-color: #4e4c70;
+}
+
+.coffee{
+    padding: 100px 0;
+    background-color: #E1E2E6;
+    position: relative;
+}
+
+.coffee-contet{
+    text-align: center;
+}
+
+.coffee-contet h2{
+    font-size: 55px;
+    line-height: 70px;
+    color: #323337;
+    text-transform: uppercase;
+    padding: 0 250px;
+    margin-bottom: 15px;
+}
+
+.txt-p{
+    font-size: 16px;
+    color: #414247;
+    padding: 0 250px;
+    margin-bottom: 35px;
+}
+
+.coffee-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.coffee-1{
+    padding: 0 25px;
+}
+
+.coffee-1 img{
+    width: 200px;
+}
+
+.coffee-img{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.coffee-1 h3{
+    color: #323337;
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.services{
+    background-image: linear-gradient(
+        rgba(0,0,0,0.7), 
+        rgba(0,0,0,0.7),)
+        url(img/1.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;    
+    background-attachment: fixed;
+    padding: 100px 0;
+}
+
+.services-content{
+    text-align: center;
+}
+
+.services-content h2{
+    font-size: 55px;
+    line-height: 70px;
+    color: #0c111c;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+.services-content p {
+    font-size: 16px;
+    color:  #03020a;
+    margin-bottom: 50px;
+    padding: 0 100px;
+}
+
+.services-group{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.services-1{
+    padding: 0 100px;
+}
+
+.services-1 img{
+    width: 25px;
+    margin-bottom: 15px;
+}
+
+.services-1 h3{
+    color: #46367e;
+    font-size: 18px;
+}
+
+.general{
+    display: flex;
+}
+
+.general-1{
+    width: 50%;
+    padding: 100px 250px 100px 100px;
+    background-color: #E1E2E6;
+}
+
+.general-2{
+    background-image: url(img/1.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+}
+
+.general-3{
+    background-image: url(img/1.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+}
+
+h2{
+    font-size: 55px;
+    line-height: 70px;
+    color: #323337;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+p{
+    font-size: 16px;
+    color: #414247;
+    margin: 25px 0 45px 0;
+}
+
+.blog{
+    padding: 100px 0;
+    text-align: center;
+}
+
+.blog-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.blog-1{
+    padding: 15px 55px;
+}
+
+.blog-1 img{
+    width: 250px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.blog-1 h3{
+    font-size: 25px;
+    color: #323337;
+}
+
+.footer{
+    padding: 100px 0;
+    background-color: #0d0827;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.link h3{
+    font-size: 18px;
+    color: #F9FAFC;
+    margin-bottom: 15px;
+}
+
+.link a{
+    font-size: 16px;
+    color: #C5C5C5;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.jenny{
+    color: #000000;
+}
+
+@media (max-width:991px) {
+    
+    .menu{
+        padding: 30px;
+    }
+
+    .menu label{
+        display: initial;
+    }
+
+    .menu .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #323337;
+        display: none;
+    }
+
+    .menu .navbar ul li{
+        width: 100%;
+    }
+
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+
+    .header{
+        min-height: 0vh;
+    }
+
+    .header-content{
+        padding: 100px 30px;
+    }
+
+    .header-content p{
+        padding: 0;
+    }
+
+    .coffee{
+        padding: 30px;
+    }
+
+    .coffee-content h2{
+        padding: 0;
+    }
+
+    .txt-p{
+        padding: 0;
+    }
+
+    .coffee-group{
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    .coffee-img{
+        display: none;
+    }
+
+    .services{
+        padding: 30px;
+    }
+
+    .services-content p{
+        padding: 0;
+    }
+
+    .services-group{
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    .services-1{
+        margin-bottom: 25px;
+    }
+
+    .general{
+        flex-direction: column;
+    }
+
+    .general-1{
+        width: 100%;
+        padding: 30px;
+        text-align: center;
+    }
+
+    .general-2, .general-3{
+        display: none;
+    }
+
+    .blog{
+        padding: 30px;
+    }
+
+    .blog-content{
+        flex-direction: column;
+    }
+
+    .blog-1{
+        padding: 0;
+    }
+
+    .footer{
+        padding: 0;
+    }
+
+    .footer-content{
+        padding: 30px;
+    }
+
+    .footer-content{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+    </style>
+</head>
+<body>
+    <header class="header">
+
+        <div class="menu container">
+            <a href="#" class="logo">TESH</a>
+            <input type="checkbox" id="menu"/>
+            <label for="menu">
+                <img src="img/menu.png" class="menu-icono" alt="">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="unidad1.html">UNIDAD 1</a></li>
+                    <li><a href="unidad2.html">UNIDAD 2</a></li>
+                    <li><a href="unidad3.html">UNIDAD 3</a></li>
+                    <li><a href="unidad4.html">UNIDAD 4</a></li>
+                    <li><a href="unidad5.html">UNIDAD 5</a></li>
+                    <li><a href="unidad6.html">UNIDAD 6</a></li>
+                </ul>
+            </nav>
+        </div> 
+
+        <div class="header-content container">
+            <h1>Estructura de Datos</h1>
+            <p>Las estructuras de datos, junto con el estudio de algoritmo, hacen parte de los fundamentos de la programación y se escucha mucho sobre la importancia de estudiar este tema. En esto articulo, vamos abordar las estructuras de datos: que son, algunos ejemplos y porque son importantes.</p>
+            <a href="https://www.aluracursos.com/blog/estructura-de-datos-introduccion" class="btn-1">MÁS INFORMACIÓN</a>
+        </div>
+    </header>
+
+    <section class="coffee">
+
+        <img class="coffee-img" src="" alt="">
+
+        <div class="coffee-container container">
+
+            <h2>ESTRUCTURA DE DATOS</h2>
+            <p class="text-p">Los datos son los bloques básicos de la programación. Ellos representan una unidad o un elemento de información que puede ser accedido a través de un identificador, por ejemplo, una variable.Una estructura de datos es una estrategia
+                computacional que permite administrar un
+                conjunto de datos mediante tipos de datos
+                compuestos para realizar operaciones que
+                permitan solucionar problemas. Se divide en las siguientes unidades:
+            </p>
+
+            <div class="coffee-group">
+
+                <div class="coffee-1">
+                    <img src="img/1.jpg" alt="">
+                    <h3>UNIDAD 1. Introducción a las estructuras de datos</h3>
+                    <p> Una estructura de datos es una estrategia
+                        computacional que permite administrar un
+                        conjunto de datos mediante tipos de datos
+                        compuestos para realizar operaciones que
+                        permitan solucionar problemas</p>
+                </div>
+
+                <div class="coffee-1">
+                    <img src="img/recu.jpg" alt="">
+                    <h3>UNIDAD 2. Recursividad</h3>
+                    <p>
+                        Es una técnica de programación donde una función se llama a sí misma directa o indirectamente para resolver un problema. Se utiliza comúnmente para dividir problemas complejos en subproblemas más simples. Ejemplo: cálculo de factorial o recorrido de estructuras jerárquicas como árboles.
+                    </p>
+                </div>
+
+                <div class="coffee-1">
+                    <img src="img/lineal.png" alt="">
+                    <h3>UNIDAD 3. Estructura lineal</h3>
+                    <p>
+                        Es un tipo de estructura de datos donde los elementos están organizados de forma secuencial, uno tras otro. Ejemplos:
+                        Arreglos (arrays), Listas enlazadas, Pilas, Colas
+                    </p>
+                </div>
+            </div>
+
+            <div class="coffee-group">
+
+                <div class="coffee-1">
+                    <img src="img/noLineal.webp" alt="">
+                    <h3>UNIDAD 4. Estructuras no lineales</h3>
+                    <p>
+                        Son estructuras de datos donde los elementos no están organizados de manera secuencial, sino jerárquica o en forma de red. Ejemplos:
+                        Árboles (binarios, AVL, B-trees), Grafos (dirigidos, no dirigidos, ponderados)
+                    </p>
+                </div>
+
+                <div class="coffee-1">
+                    <img src="img/ordenamiento.png" alt="">
+                    <h3>UNIDAD 5. Métodos de ordenamiento</h3>
+                    <p>
+                        Son algoritmos que reorganizan los elementos de una estructura de datos en un orden específico, como ascendente o descendente. Ejemplos:
+                        Burbuja (Bubble Sort), Selección (Selection Sort), Inserción (Insertion Sort), Rápido (Quick Sort), Por mezcla (Merge Sort)
+                    </p>
+                </div>
+
+                <div class="coffee-1">
+                    <img src="img/busqueda.jpeg" alt="">
+                    <h3>UNIDAD 6. Métodos de búsqueda</h3>
+                    <p>
+                        Son técnicas para localizar un elemento dentro de una estructura de datos. Ejemplos:
+                        Búsqueda secuencial: Recorre los elementos uno por uno. Búsqueda binaria: Divide la búsqueda en dos mitades, aplicable en listas ordenadas.
+                        Búsqueda en profundidad (DFS): Para grafos y árboles.
+                        Búsqueda en amplitud (BFS): Para grafos y árboles.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <main class="services">
+
+        <div class="services-content container">
+            <h2>APLICACIONES</h2>
+
+            <div class="services-group">
+
+                <div class="services-1">
+                    <h3>ÁRBOLES Y GRAFICOS</h3>
+                </div>
+
+                <div class="services-1">
+                    <h3>BASE DE DATOS</h3>
+                </div>
+
+                <div class="services-1">
+                    <h3>ALGORITMOS</h3>
+                </div>
+
+            </div>
+
+            <p>
+                Las estructuras de datos se pueden encontrar en todas partes de la tecnología que utilizamos a diario. Desempeñan un papel crucial en todo tipo de aplicaciones y sus diversos componentes. Comprender las capacidades fundamentales de las diferentes estructuras de datos le permite aplicarlas de manera efectiva en el diseño y optimización del software. 
+            </p>
+            <a href="https://appmaster.io/es/blog/que-son-las-definiciones-y-tipos-de-estructuras-de-datos" class="btn-1">informacion</a>
+
+        </div>
+
+    </main>
+
+    <section class="blog container">
+
+        <h2>Importancia de las Estructuras de Datos</h2>
+        <p></p>
+
+        <div class="blog-content">
+            <div class="blog-1">
+                <img src="img/op.jpg" alt="">
+                <h3>Optimización:</h3>
+                <p>
+                    Mejoran el uso eficiente de la memoria y el tiempo.
+                </p>
+            </div>
+
+            <div class="blog-1">
+                <img src="img/pro.jpg" alt="">
+                <h3>Resolución de Problemas:</h3>
+                <p>
+                    Facilitan el diseño de algoritmos eficientes.
+                </p>
+            </div>
+
+            <div class="blog-1">
+                <img src="img/base.jpg" alt="">
+                <h3>Aplicaciones:</h3>
+                <p>
+                    Se utilizan en sistemas operativos, bases de datos, inteligencia artificial, redes, y más.
+                </p>
+            </div>
+        </div>
+        <a href="https://codigoonclick.com/estructuras-de-datos-que-son-y-para-que-sirven/" class="btn-1">informacion</a>
+    </section>
+
+    <main class="services">
+
+        <div class="services-content container">
+            <h2>MATERIA DE APOYO</h2>
+
+            <p>
+                El desarrollo de páginas web es un proceso creativo y técnico que requiere el uso de diversos recursos y herramientas, 
+                conocidos como material de apoyo, para garantizar que el producto final sea funcional, atractivo y accesible. 
+                Este material comprende desde lenguajes de programación hasta herramientas gráficas, frameworks y bibliotecas que 
+                ayudan a construir, estructurar y optimizar los sitios web.</p>
+                
+            <p> Entre los recursos esenciales se encuentran los lenguajes de desarrollo web, como HTML y CSS que son la base para 
+                crear el contenido, diseñar la apariencia y proporcionar interactividad en una página. Por otro lado, editores de código (Visual Studio Code, Sublime Text) y gestores de versiones (Git, GitHub) son fundamentales para
+                organizar y colaborar en los proyectos, mientras que herramientas de diseño como Figma o Adobe XD permiten crear maquetas visuales 
+                que diseño final. Asimismo, recursos de apoyo como imágenes, íconos, tipografías y paletas de colores, disponibles en 
+                plataformas como Unsplash, FontAwesome o Google Fonts, contribuyen a la personalización y calidad estética del sitio.</p>
+                
+            <p>    El uso adecuado de este material de apoyo no solo facilita el trabajo del desarrollador, sino que también mejora la 
+                experiencia del usuario final, garantizando sitios web funcionales, accesibles y visualmente atractivos. 
+                A lo largo del desarrollo de una página web, estos recursos actúan como piezas clave que permiten transformar una idea 
+                en un proyecto digital.
+            </p>
+
+            <div class="services-group">
+
+                <div class="services-1">
+                    <h3></h3>
+                </div>
+
+                <div class="services-1">
+                    <h3><a href="https://www.studocu.com/es-mx/document/instituto-tecnologico-latinoamericano/etica/estructura-de-datos-unidad-6-metodos-de-busqueda/31932357">SITIOS WEB</a></h3>
+                </div>
+
+                <div class="services-1">
+                    <h3></h3>
+                </div>
+
+            </div>
+
+            <div class="services-group">
+
+                <div class="services-1">
+                    <h3></h3>
+                </div>
+
+                <div class="services-1">
+                    <h3>VIDEOS</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/YEmdHbQBCSQ?si=GkL1BkuCBiq6Aapw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <div class="services-1">
+                    <h3></h3>
+                </div>
+
+            </div>
+
+            <div class="services-group">
+
+                <div class="services-1">
+                    <h3></h3>
+                </div>
+
+                <div class="services-1">
+                    <h3>VIDEOS</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/OuoLQiXPitk?si=7niOPNmjnrr-UnzX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <div class="services-1">
+                    <h3></h3>
+                </div>
+
+            </div>
+
+            <div class="services-group">
+
+                <div class="services-1">
+                    <h3></h3>
+                </div>
+
+                <div class="services-1">
+                    <h3>VIDEOS</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/1piZniLV39M?si=_H4p0j6BKcgW5ph-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <div class="services-1">
+                    <h3></h3>
+                </div>
+
+            </div>
+
+            <div class="services-group">
+
+                <div class="services-1">
+                    <h3></h3>
+                </div>
+
+                <div class="services-1">
+                    <h3>VIDEOS</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/jEfmotrL7jQ?si=ajCqVcpczg82x0Ko" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <div class="services-1">
+                    <h3></h3>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="footer">
+
+        <div class="footer-content container">
+
+            <div class="link">
+
+                <h3>VANIA PONCE</h3>
+                <ul>
+                    <li><a href="#">DISEÑO DE UNIDAD</a></li>
+                    <li><a href="#">DISEÑO DE UNIDAD</a></li>
+                </ul>
+            </div>
+
+            <div class="link">
+                
+                <h3>CARMEN LUNA</h3>
+                <ul>
+                    <li><a href="#">DISEÑO DE UNIDAD</a></li>
+                    <li><a href="#">DISEÑO DE UNIDAD</a></li>
+                </ul>
+            </div>
+
+            <div class="link">
+                
+                <h3>JENNYFER VALVERDE</h3>
+                <ul>
+                    <li><a href="#">DISEÑO DE UNIDAD</a></li>
+                    <li><a href="#">DISEÑO DE UNIDAD</a></li>
+                </ul>
+            </div>
+
+            <div class="link">
+                
+                <h3>EDWIN TORIBIO</h3>
+                <ul>
+                    <li><a href="#">DISEÑO DE UNIDAD</a></li>
+                    <li><a href="#">DISEÑO DE UNIDAD</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

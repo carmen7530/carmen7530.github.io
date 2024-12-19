@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explicación sobre los métodos de ordenamiento internos y externos en programación.">
+    <title>Métodos de Ordenamiento</title>
+    <style>
+        body {
+            font-family: "Georgia", serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            color: #444;
+            display: flex;
+        }
+        nav {
+            background-color: #f4a7b9;
+            width: 20%;
+            height: 100vh;
+            padding: 1rem;
+            box-shadow: 4px 0px 8px rgba(0, 0, 0, 0.2);
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            margin-bottom: 1rem;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border: 2px solid white;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            display: block;
+            transition: background 0.3s, color 0.3s;
+        }
+        nav ul li a:hover {
+            background-color: white;
+            color: #d977a5;
+        }
+        main {
+            flex-grow: 1;
+            padding: 3rem;
+        }
+        header {
+            background-color: #d977a5;
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 2rem;
+        }
+        .content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            text-align: center;
+        }
+        .content div {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .content h2 {
+            color: #d977a5;
+            margin-top: 0;
+        }
+        .image-section img {
+            max-width: 80%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="principal.html">Inicio</a></li>
+            <li><a href="metbusqueda.html">Siguiente Unidad</a></li>
+            <li><a href="estru-nolineal.html">Unidad Anterior </a></li>
+
+        </ul>
+    </nav>
+    <main>
+        <header>
+            <h1>Métodos de Ordenamiento</h1>
+        </header>
+        <div class="content">
+            <div>
+                <h2>Algoritmos de Ordenamiento Internos</h2>
+                <p>El ordenamiento es una operación fundamental para organizar datos en un orden determinado. Existen dos tipos de algoritmos de ordenamiento: internos y externos. Los internos trabajan con datos que caben completamente en la memoria principal, mientras que los externos se usan cuando los datos son demasiado grandes para almacenarse en la memoria y deben almacenarse en discos u otros dispositivos de almacenamiento.</p>
+            </div>
+            <div>
+                <h3> Algoritmos de Ordenamiento Internos</h3>
+                <h4>Burbuja (Bubble Sort)</h4>
+                <p>Un algoritmo simple que compara elementos adyacentes y los intercambia si están en el orden incorrecto. Continúa hasta que la lista está completamente ordenada.</p>
+                <h4>Complejidad:</h4>
+                <p>O(n<sup>2</sup>) en el peor caso.</p>
+
+                <h4>Quicksort</h4>
+                <p>Un algoritmo de divide y vencerás que divide los datos en sublistas, ordena esas sublistas y las combina. Es eficiente y muy utilizado.</p>
+                <h4>Complejidad:</h4>
+                <p>O(n log n) en el mejor caso, pero puede llegar a O(n<sup>2</sup>) en el peor caso si no se elige bien el pivote.</p>
+                
+                <h4>ShellSort</h4>
+                <p>Una mejora del ordenamiento por inserción, que ordena elementos separados por un intervalo mayor y luego reduce el intervalo gradualmente.</p>
+                <h4>Complejidad:</h4>
+                <p>Depende del intervalo, pero generalmente O(n<sup>3/2</sup>).</p>
+
+                <h4>Radix Sort</h4>
+                <p>Un algoritmo no comparativo que ordena los números de acuerdo con sus dígitos, utilizando un algoritmo estable como Counting Sort para cada dígito.</p>
+                <h4>Complejidad:</h4>
+                <p>O(nk), donde n es el número de elementos y k es el número de dígitos.</p>
+            </div>
+            <div>
+                <h2>Algoritmos de Ordenamiento Externos</h2>
+                <h4>Intercalación</h4>
+                <p>Utiliza la combinación de listas previamente ordenadas para formar una lista completamente ordenada. Se usa cuando los datos están divididos en bloques pequeños.</p>
+                <h4>Aplicaciones:</h4>
+                <p>Utilizado en bases de datos y archivos grandes.</p>
+
+                <h4>Mezcla Directa</h4>
+                <p>Fragmentos de datos son ordenados y luego combinados en bloques más grandes de forma iterativa hasta que toda la lista esté ordenada.</p>
+                <h4>Aplicaciones:</h4>
+                <p>Útil cuando los datos no caben completamente en la memoria.</p>
+
+                <h4>Mezcla Natural</h4>
+                <p>Una versión optimizada de la mezcla directa, que utiliza secuencias ya ordenadas de manera natural, lo que mejora la eficiencia en comparación con la mezcla directa.</p>
+                <h4>Aplicaciones:</h4>
+                <p>Empleada cuando los datos ya tienen cierto orden, como en sistemas de gestión de archivos.</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

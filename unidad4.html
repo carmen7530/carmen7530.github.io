@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad 4</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        button {
+            margin: 10px 0;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .contenido {
+            display: none;
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+    <script>
+        function mostrarUnidad(id) {
+            const contenido = document.getElementById(id);
+            contenido.style.display = contenido.style.display === "block" ? "none" : "block";
+        }
+    </script>
+</head>
+<body>
+    <h1>Unidad 4. Estructura No Lineal</h1>
+
+    <button onclick="mostrarUnidad('unidad4')">Unidad 4: Estructuras No Lineales</button>
+    <div id="unidad4" class="contenido">
+        <h2>Unidad 4. Estructuras No Lineales</h2>
+        <h3>4.1 Árboles</h3>
+        <p>Los árboles organizan datos jerárquicamente.</p>
+        <h4>4.1.1 Clasificación</h4>
+        <ul>
+            <li>Árbol general.</li>
+            <li>Árbol binario.</li>
+            <li>Árbol binario de búsqueda.</li>
+            <li>Árbol balanceado.</li>
+        </ul>
+        <h4>4.1.2 Operaciones básicas</h4>
+        <ul>
+            <li>Inserción.</li>
+            <li>Eliminación.</li>
+            <li>Recorridos (Preorden, Inorden, Postorden).</li>
+        </ul>
+        <h4>4.1.3 Aplicaciones</h4>
+        <ul>
+            <li>Búsquedas rápidas.</li>
+            <li>Representación de expresiones.</li>
+            <li>Árboles de decisión.</li>
+        </ul>
+
+        <h3>4.2 Grafos</h3>
+        <p>Los grafos son estructuras de nodos y aristas.</p>
+        <h4>4.2.1 Representación</h4>
+        <ul>
+            <li>Matriz de adyacencia.</li>
+            <li>Lista de adyacencia.</li>
+        </ul>
+        <h4>4.2.2 Operaciones básicas</h4>
+        <ul>
+            <li>DFS.</li>
+            <li>BFS.</li>
+            <li>Adición/Eliminación de nodos y aristas.</li>
+        </ul>
+
+        <h3>Código de ejemplo</h3>
+        <pre>
+class Nodo {
+    int dato;
+    Nodo izquierda, derecha;
+
+    public Nodo(int dato) {
+        this.dato = dato;
+        izquierda = derecha = null;
+    }
+}
+        </pre>
+    </div>
+</body>
+</html>

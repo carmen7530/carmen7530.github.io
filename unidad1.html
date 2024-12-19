@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página introductoria sobre estructuras de datos y algoritmos. Aprende sobre TDAs, manejo de memoria y análisis de algoritmos.">
+    <title>Introducción a la Estructura de Datos</title>
+    <style>
+        body {
+            font-family: "Georgia", serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            color: #444;
+            display: flex;
+        }
+        nav {
+            background-color: #f4a7b9;
+            width: 20%;
+            height: 100vh;
+            padding: 1rem;
+            box-shadow: 4px 0px 8px rgba(0, 0, 0, 0.2);
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            margin-bottom: 1rem;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border: 2px solid white;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            display: block;
+            transition: background 0.3s, color 0.3s;
+        }
+        nav ul li a:hover {
+            background-color: white;
+            color: #d977a5;
+        }
+        main {
+            flex-grow: 1;
+            padding: 3rem;
+        }
+        header {
+            background-color: #d977a5;
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 2rem;
+        }
+        .content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            text-align: center;
+        }
+        .content div {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .content h2 {
+            color: #d977a5;
+            margin-top: 0;
+        }
+        .image-section img {
+            max-width: 80%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="principal.html">Inicio</a></li>
+            <li><a href="recursividad.html">Siguiente unidad</a></li>
+        </ul>
+    </nav>
+    <main>
+        <header>
+            <h1>Introducción a la Estructura de Datos</h1>
+        </header>
+        <div class="content">
+            <div>
+                <h2>Clasificación de las estructuras de datos</h2>
+                <p>Las estructuras de datos pueden ser lineales (e.g., arreglos, listas, pilas y colas) o no lineales (e.g., árboles y grafos). Estas se eligen según la naturaleza del problema y la eficiencia requerida en las operaciones.</p>
+            </div>
+            <div>
+                <h2>Tipos de datos abstractos (TDA)</h2>
+                <p>Los TDA son modelos conceptuales que definen conjuntos de datos y las operaciones permitidas sobre ellos, sin considerar la implementación. Ejemplos incluyen listas, pilas, colas, diccionarios, conjuntos y árboles, los cuales resuelven problemas específicos en el manejo de información.</p>
+            </div>
+            <div>
+                <h2>Ejemplos de TDA</h2>
+                <p>Cada TDA tiene implementaciones específicas según el lenguaje de programación utilizado, como listas con arreglos dinámicos o listas enlazadas, pilas y colas con listas o estructuras dedicadas, y árboles y grafos para representar relaciones jerárquicas o redes.</p>
+            </div>
+            <div>
+                <h2>Manejo de memoria</h2>
+                <p>Este apartado distingue entre memoria estática, donde el tamaño de los datos es fijo y se asigna en tiempo de compilación, y memoria dinámica, que se asigna durante la ejecución, permitiendo mayor flexibilidad al costo de una mayor complejidad en el manejo.</p>
+            </div>
+            <div>
+                <h2>Análisis de algoritmos</h2>
+                <p>El análisis se centra en evaluar dos aspectos principales: la complejidad temporal, que mide cómo el tiempo de ejecución crece con el tamaño de la entrada, y la complejidad espacial, que evalúa la memoria que utiliza el algoritmo. Ambos factores determinan la eficiencia, siendo clave para seleccionar la solución más adecuada en un contexto dado.</p>
+            </div>
+            <div class="image-section">
+                <img src="OSK.jpeg" alt="Ilustración de estructuras de datos">
+            </div>
+        </div>
+    </main>
+</body>
+</html>

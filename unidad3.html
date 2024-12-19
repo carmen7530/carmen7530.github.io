@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad 3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        button {
+            margin: 10px 0;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .contenido {
+            display: none;
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+    <script>
+        function mostrarUnidad(id) {
+            const contenido = document.getElementById(id);
+            contenido.style.display = contenido.style.display === "block" ? "none" : "block";
+        }
+    </script>
+</head>
+<body>
+    <h1>Unidad 3. Estructuras Lineales</h1>
+
+    <button onclick="mostrarUnidad('unidad3')">Unidad 3: Estructuras Lineales</button>
+    <div id="unidad3" class="contenido">
+        <h2>Unidad 3. Estructuras Lineales</h2>
+        <h3>3.1 Pilas</h3>
+        <p>Las pilas son estructuras de datos lineales que siguen el principio LIFO (Last In, First Out).</p>
+        <h4>3.1.1 Representación en memoria</h4>
+        <p>Se representan usando arreglos o listas enlazadas, controladas por un puntero o índice para la cima.</p>
+        <h4>3.1.2 Operaciones básicas</h4>
+        <ul>
+            <li>Push: Insertar un elemento en la cima.</li>
+            <li>Pop: Eliminar el elemento en la cima.</li>
+            <li>Peek: Visualizar el elemento en la cima sin eliminarlo.</li>
+        </ul>
+        <h4>3.1.3 Aplicaciones</h4>
+        <ul>
+            <li>Gestión de llamadas a funciones (pila de llamadas).</li>
+            <li>Evaluación de expresiones (notación postfija y prefija).</li>
+            <li>Deshacer acciones en aplicaciones.</li>
+        </ul>
+
+        <h3>3.2 Colas</h3>
+        <p>Las colas siguen el principio FIFO (First In, First Out).</p>
+        <h4>3.2.1 Representación en memoria</h4>
+        <p>Se implementan con arreglos o listas enlazadas, gestionando dos punteros: frente y final.</p>
+        <h4>3.2.2 Operaciones básicas</h4>
+        <ul>
+            <li>Enqueue: Insertar un elemento al final.</li>
+            <li>Dequeue: Eliminar el elemento al frente.</li>
+            <li>Peek: Visualizar el elemento al frente sin eliminarlo.</li>
+        </ul>
+        <h4>3.2.3 Tipos</h4>
+        <ul>
+            <li>Cola simple.</li>
+            <li>Cola circular.</li>
+            <li>Bicola (Deque).</li>
+        </ul>
+        <h4>3.2.4 Aplicaciones</h4>
+        <ul>
+            <li>Gestión de tareas en sistemas operativos.</li>
+            <li>Procesamiento de datos en redes.</li>
+            <li>Simulación de colas (bancos, supermercados).</li>
+        </ul>
+
+        <h3>3.3 Listas</h3>
+        <p>Las listas son colecciones de elementos donde el orden y la posición son importantes.</p>
+        <h4>3.3.1 Operaciones básicas</h4>
+        <ul>
+            <li>Inserción: Agregar elementos en cualquier posición.</li>
+            <li>Eliminación: Quitar elementos.</li>
+            <li>Recorrido: Desplazarse a través de los elementos.</li>
+            <li>Búsqueda: Encontrar elementos específicos.</li>
+        </ul>
+        <h4>3.3.2 Tipos</h4>
+        <ul>
+            <li>Lista simplemente enlazada.</li>
+            <li>Lista doblemente enlazada.</li>
+            <li>Lista circular.</li>
+        </ul>
+        <h4>3.3.3 Aplicaciones</h4>
+        <ul>
+            <li>Almacenamiento dinámico de datos.</li>
+            <li>Implementación de otras estructuras como pilas y colas.</li>
+            <li>Sistemas de navegación.</li>
+        </ul>
+
+        <h3>Código de ejemplo</h3>
+        <pre>
+class Pila {
+    private int[] stackArray;
+    private int top;
+    
+    public Pila(int size) {
+        stackArray = new int[size];
+        top = -1;
+    }
+    
+    public void push(int value) {
+        if (top < stackArray.length - 1) {
+            stackArray[++top] = value;
+        }
+    }
+    
+    public int pop() {
+        return top >= 0 ? stackArray[top--] : -1;
+    }
+}
+        </pre>
+    </div>
+
+</body>
+</html>
